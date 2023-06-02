@@ -1,0 +1,67 @@
+[
+{"PREGUNTA":"¿Cual es la estructura basica de un programa en C?",
+"OPCION 1":"a. int main() {return 0;}",
+"OPCION 2":"b. #include <stdio.h>",
+"OPCION 3":"c. void main() {return 0;}",
+"OPCION 4":"d. #include <conio.h>",
+"CORRECTA":"a. int main() {return 0;}"
+},
+{
+"PREGUNTA": "Que hace la funcion printf en C?",
+"OPCION 1": "a. Lee la entrada del usuario",
+"OPCION 2": "b. Imprime la salida en la pantalla",
+"OPCION 3": "c. Realiza cálculos aritméticos",
+"OPCION 4": "d. Ninguna de las anteriores",
+"CORRECTA": "b. Imprime la salida en la pantalla"
+},
+{
+"PREGUNTA": "Cual es la diferencia entre = y == en C?",
+"OPCION 1": "a. = se utiliza para asignar un valor a una variable
+mientras que == se utiliza para comparar valores",
+"OPCION 2": "b. = y == son la misma cosa",
+"OPCION 3": "c. = se utiliza para comparar valores mientras que ==
+se utiliza para asignar un valor a una variable",
+"OPCION 4": "d. Ninguna de las anteriores",
+"CORRECTA": "a. = se utiliza para asignar un valor a una variable mientras que == se utiliza para comparar valores"
+},
+{
+"PREGUNTA": "Cual es el proposito de la declaracion if en C?",
+"OPCION 1": "a. Para ejecutar un bloque de codigo si se cumple una cierta condicion",
+"OPCION 2": "b. Para asignar un valor a una variable",
+"OPCION 3": "c. Para imprimir la salida en la pantalla",
+"OPCION 4": "d. Ninguna de las anteriores",
+"CORRECTA": "a. Para ejecutar un bloque de codigo si se cumple una cierta condicion"
+},
+{
+"PREGUNTA": "Cual es el valor de la expresion 5 % 2?",
+"OPCION 1": "a. 1",
+"OPCION 2": "b. 2",
+"OPCION 3": "c. 0",
+"OPCION 4": "d. 3",
+"CORRECTA": "a. 1"
+},
+{
+"PREGUNTA": "Que tipo de datos se utiliza para almacenar valores decimales en C?",
+"OPCION 1": "a. int",
+"OPCION 2": "b. char",
+"OPCION 3": "c. float",
+"OPCION 4": "d. double",
+"CORRECTA": "c. float"
+},
+{
+"PREGUNTA": "Cual es el valor maximo que se puede almacenar en un tipo de datos short int en C?",
+"OPCION 1": "a. 32767",
+"OPCION 2": "b. 65535",
+"OPCION 3": "c. 2147483647",
+"OPCION 4": "d. 9223372036854775807",
+"CORRECTA": "a. 32767"
+},
+{
+"PREGUNTA": "Que es el uso de la declaracion break en C?",
+"OPCION 1": "a. Para salir de un bucle",
+"OPCION 2": "b. Para continuar con la siguiente iteracion de un bucle",
+"OPCION 3": "c. Para ir a la siguiente linea en la salida",
+"OPCION 4": "d. Ninguna de las anteriores",
+"CORRECTA": "a. Para salir de un bucle"
+}
+]

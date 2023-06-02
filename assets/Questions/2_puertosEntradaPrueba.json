@@ -1,0 +1,132 @@
+[
+  {
+    "PREGUNTA": "En el registro TRISX un 1 significa ______(1) mientras que un cero indica _______(2).",
+    "HUECOS": 2,
+    "OPCIONES": 2,
+    "OPCION A": "Input o entrada",
+    "OPCION B": "Output o salida",
+    "ENTRADA 1": "Input o entrada",
+    "ENTRADA 2": "Output o salida"
+  },
+  {
+    "PREGUNTA": "Para pines no usados, lo correcto es definirlos como _____(1) y ponerlos a nivel _____(2)",
+    "HUECOS": 2,
+    "OPCIONES": 4,
+    "OPCION A": "Entradas",
+    "OPCION B": "Salidas",
+    "OPCION C": "Bajo",
+    "OPCION D": "Alto",
+    "ENTRADA 1": "Salidas",
+    "ENTRADA 2": "Bajo"
+  },
+  {
+    "PREGUNTA": "En el registro ANSELX por defecto, todos sus bits estan a ___(1), lo que marca que los input estan definidos como ______(2), por lo que en caso de utilizar un bit de TRISX, habria que marcar ese bit en ANSELX con un ____(3) para indicar que se trata de una entrada _____(4)",
+    "HUECOS": 4,
+    "OPCIONES": 4,
+    "OPCION A": "Digital",
+    "OPCION B": "Analogico",
+    "OPCION C": 0,
+    "OPCION D": 1,
+    "ENTRADA 1": 1,
+    "ENTRADA 2": "Analogico",
+    "ENTRADA 3": "0",
+    "ENTRADA 4": "Digital"
+  },
+  {
+    "PREGUNTA": "En caso de leer PORTX de un pin analogico, siempre see leera un __(1)",
+    "HUECOS": 1,
+    "OPCIONES": 3,
+    "OPCION A": 0,
+    "OPCION B": 1,
+    "OPCION C": "Error",
+    "ENTRADA 1": 0
+  },
+  {
+    "PREGUNTA": "TRISB determina que bits de B son PORTB, es decir de _______(1) y cuales son LATB, es decir de _____(2).",
+    "HUECOS": 2,
+    "OPCIONES": 2,
+    "OPCION A": "Escritura",
+    "OPCION B": "Lectura",
+    "ENTRADA 1": "Lectura",
+    "ENTRADA 2": "Escritura"
+  },
+ 
+  {
+    "PREGUNTA": "Para detectar un flanco de bajada* la forma correcta de codificarlo es: 
+		#include <xc.h>
+		#define PIN_PULSADOR 13
+		int main(void) {
+			ANSELB &= ~(1<<PIN_PULSADOR); TRISB = 1<<PIN_PULSADOR;
+			int pulsador;
+			while (1) {
+				_________________(1)
+			}
+		return 0; 
+		}",
+    "HUECOS": 1,
+    "OPCIONES": 3,
+    "OPCION A": "pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+    		if (pulsador == 0) {
+      
+		}",
+    "OPCION B": "pulsador_ant = pulsador;
+		pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+		if (pulsador!=pulsador_ant && pulsador==0) {
+
+		}",
+    "OPCION C": "pulsador_ant = pulsador;
+		pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+		if (pulsador > pulsador_ant) {
+
+		}",
+    "ENTRADA 1": "pulsador_ant = pulsador;
+		pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+		if (pulsador!=pulsador_ant && pulsador==0) {
+
+		}"
+  },
+  {
+    "PREGUNTA": "Queremos un programa que muestre en loS LEDs el numero de veces que se ha pulsado el pulsador desde el arranque. Cuando la cuenta llegue a 15 se volvera a empezar en cero. Termine de completar el codigo para que funcione: 
+		#include <xc.h> #define PIN_PULSADOR 5
+
+		int main(void) {
+    			int pulsador_ant* pulsador_act;
+   			int contador=0;
+    			TRISC =  _____(1);
+    			LATC = ______(2);
+    			ANSELB &= ~(1<<PIN_PULSADOR);
+    			TRISB = _____(3);
+
+    			pulsador_ant = (PORTB >> PIN_PULSADOR) & 1;
+    			while (1) {
+        			//Se lee el estado del pulsador
+        			pulsador_act = (PORTB >> PIN_PULSADOR) & 1;
+        			if ((pulsador_act != pulsador_ant) && (pulsador_act == 0)) { ,,si flanco de bajada
+            				contador+=1;
+            				_________(4)
+        			}
+        			pulsador_ant = pulsador_act;
+    			}
+		}",
+    "HUECOS": 4,
+    "OPCIONES": 6,
+    "OPCION A": "0x000F",
+    "OPCION B": "~(0x000F)",
+    "OPCION C": "0xFFFF",
+    "OPCION D": "if(contador==15) {contador=0;} LATC=contador;",
+    "OPCION E": "if(contador==16) {contador=0;} LATC=~contador;",
+    "OPCION F": "if(contador==15) {contador=0;} LATC=~contador;",
+    "ENTRADA 1": "~(0x000F)",
+    "ENTRADA 2": "0x000F",
+    "ENTRADA 3": "0xFFFF",
+    "ENTRADA 4": "if(contador==16) {contador=0;} LATC=~contador;"
+  },
+  {
+    "PREGUNTA": "PREGUNTA FINAL: Se pueden tener varios while(1) dentro del codigo, para conseguir un secuenciamiento de las tareas",
+    "HUECOS": 1,
+    "OPCIONES": 2,
+    "OPCION A": "VERDADERO",
+    "OPCION B": "FALSO",
+    "ENTRADA 1": "FALSO"
+  }
+]

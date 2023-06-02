@@ -1,0 +1,40 @@
+[
+{
+"PREGUNTA": "En la programacion con maquina de estados, ¿que partes hay?",
+"OPCION 1": "a. Hacer el dibujo de la maquina de estados",
+"OPCION 2": "b. Definicion de un enum con los estados",
+"OPCION 3": "c. Lectura, Transicion de estados (delta), Funcion lambda, Actuacion",
+"OPCION 4": "d. Todas las anteriores",
+"CORRECTA": "d. Todas las anteriores"
+},
+{
+"PREGUNTA": "Para que sirve una tarea Inactiva visto el ultimo dia?",
+"OPCION 1": "a. No sirve para nada pues es inactiva",
+"OPCION 2": "b. Hace que las rutinas de dentro del while/estado se ejecuten cada cierto Ts",
+"OPCION 3": "c. Deshabilita un periferico",
+"OPCION 4": "d. Es un estado dentro de la maquina de estados.",
+"CORRECTA": "b. Hace que las rutinas de dentro del while/estado se ejecuten cada cierto Ts"
+},
+{
+"PREGUNTA": "Otra forma de realizar la funcion de la tarea inactiva es:",
+"OPCION 1": "a. Crear un estado de reposo",
+"OPCION 2": "b. Poner las tareas dentro de un if que
+vigile que pasa x tiempo desde la ultima vez",
+"OPCION 3": "c. Llamar a esas tareas desde una interrupcion
+que se ejecute cada x tiempo",
+"OPCION 4": "d. Todas son equivalentes",
+"CORRECTA": "d. Todas son equivalentes"
+},
+{
+"PREGUNTA": "Cual es el inconveniente de no hacerlo por maquina de estados y usar alguna de las otras soluciones?",
+"OPCION 1": "a. Usar una funcion retardo podria necesitar de
+tiempos negativos en caso de que una tarde mas",
+"OPCION 2": "b. En una interrupcion las tareas pueden tardar
+mas que el tiempo de salto de la interrupcion",
+"OPCION 3": "c. En un if dentro del while, tampoco permite dividir
+una tarea larga en dos ni lidiar con tiempos distintos",
+"OPCION 4": "d. Todas las anteriores",
+"CORRECTA": "d. Todas las anteriores"
+}
+
+]

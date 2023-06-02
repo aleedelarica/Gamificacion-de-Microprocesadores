@@ -1,0 +1,7 @@
+PREGUNTA/HUECOS/OPCIONES/OPCION A/OPCION B/OPCION C/OPCION D/OPCION E/OPCION F/ENTRADA 1/ENTRADA 2/ENTRADA 3/ENTRADA 4
+En el registro TRISX un 1 significa ______(1) mientras que un cero indica _______(2)./2/2/Input o entrada/Output o salida/Input o entrada/Output o salida
+Para pines no usados, lo correcto es definirlos como _____(1) y ponerlos a nivel _____(2)/2/4/Entradas/Salidas/Bajo/Alto/Salidas/Bajo
+En el registro ANSELX por defecto, todos sus bits estan a ___(1), lo que marca que los input estan definidos como ______(2), por lo que en caso de utilizar un bit de TRISX, habria que marcar ese bit en ANSELX con un ____(3) para indicar que se trata de una entrada _____(4)/4/4/Digital/Analogico/0/1/1/Analogico/0/Digital
+En caso de leer PORTX de un pin analogico, siempre see leera un __(1)/1/3/0/1/Error/0
+TRISB determina que bits de B son PORTB, es decir de _______(1) y cuales son LATB, es decir de _____(2)./2/2/Escritura/Lectura/Lectura/Escritura
+PREGUNTA FINAL: Se pueden tener varios while(1) dentro del codigo, para conseguir un secuenciamiento de las tareas/1/2/VERDADERO/FALSO/FALSO

@@ -1,0 +1,55 @@
+PREGUNTA,HUECOS,OPCIONES,OPCION A,OPCION B,OPCION C,OPCION D,OPCION E,OPCION F,ENTRADA 1,ENTRADA 2,ENTRADA 3,ENTRADA 4
+En el registro TRISX un 1 significa ______(1) mientras que un cero indica _______(2).,2,2,Input o entrada,Output o salida,Input o entrada,Output o salida
+Para pines no usados* lo correcto es definirlos como _____(1) y ponerlos a nivel _____(2),2,4,Entradas,Salidas,Bajo,Alto,Salidas,Bajo
+En el registro ANSELX por defecto* todos sus bits estan a ___(1)* lo que marca que los input estan definidos como ______(2)* por lo que en caso de utilizar un bit de TRISX* habria que marcar ese bit en ANSELX con un ____(3) para indicar que se trata de una entrada _____(4),4,4,Digital,Analogico,0,1,1,Analogico,0,Digital
+En caso de leer PORTX de un pin analogico* siempre see leera un __(1),1,3,0,1,Error,0
+TRISB determina que bits de B son PORTB* es decir de _______(1) y cuales son LATB* es decir de _____(2).,2,2,Escritura,Lectura,Lectura,Escritura
+Para detectar un flanco de bajada* la forma correcta de codificarlo es: 
+#include <xc.h>
+#define PIN_PULSADOR 13
+int main(void) {
+ANSELB &= ~(1<<PIN_PULSADOR); TRISB = 1<<PIN_PULSADOR;
+int pulsador;
+while (1) {
+_________________(1)
+}
+return 0; } ,1,3,pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+    if (pulsador == 0) {
+      
+}
+,pulsador_ant = pulsador;
+pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+if (pulsador!=pulsador_ant && pulsador==0) {
+
+},pulsador_ant = pulsador;
+pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+if (pulsador > pulsador_ant) {
+
+},pulsador_ant = pulsador;
+pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+if (pulsador!=pulsador_ant && pulsador==0) {
+
+}
+Queremos un programa que muestre en loS LEDs el numero de veces que se ha pulsado el pulsador desde el arranque. Cuando la cuenta llegue a 15 se volvera a empezar en cero. Termine de completar el codigo para que funcione: 
+#include <xc.h> #define PIN_PULSADOR 5
+
+int main(void) {
+    int pulsador_ant* pulsador_act;
+    int contador=0;
+    TRISC =  _____(1);
+    LATC = ______(2);
+    ANSELB &= ~(1<<PIN_PULSADOR);
+    TRISB = _____(3);
+
+    pulsador_ant = (PORTB >> PIN_PULSADOR) & 1;
+    while (1) {
+        ,, Se lee el estado del pulsador
+        pulsador_act = (PORTB >> PIN_PULSADOR) & 1;
+        if ((pulsador_act != pulsador_ant) && (pulsador_act == 0)) { ,,si flanco de bajada
+            contador+=1;
+            _________(4)
+        }
+        pulsador_ant = pulsador_act;
+    }
+},4,6,0x000F,~(0x000F),0xFFFF,if(contador==15) {contador=0;} LATC=contador;,if(contador==16) {contador=0;} LATC=~contador;,if(contador==15) {contador=0;} LATC=~contador;,~(0x000F),0x000F,0xFFFF,if(contador==16) {contador=0;} LATC=~contador;
+PREGUNTA FINAL: Se pueden tener varios while(1) dentro del codigo* para conseguir un secuenciamiento de las tareas,1,2,VERDADERO,FALSO,FALSO

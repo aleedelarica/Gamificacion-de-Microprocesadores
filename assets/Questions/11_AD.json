@@ -1,0 +1,67 @@
+[
+{
+"PREGUNTA": "En el funcionamiento general de un SAR ADC?
+a) En un SAR ADC es necesario saber el numero de bits que tiene ya que el 3,3V en uno de dos bits equivale a una lectura del AD de  ___________ ,
+b) mientras que en uno de 10 bits el 3,3V es un ___________ .
+c) Además, hay que recordar que el proceso consta de ___________ etapas que te marcan el tiempo que tarda en tener una medida y 
+d) que el tiempo minimo y mas tipico son  ___________ ciclos.
+e) En el PIC32MX contamos con un SARADC de ___________ bits.",
+"HUECOS": 5,
+"RESPUESTA 1": "2",
+"RESPUESTA 2": "3",
+"RESPUESTA 3": "10",
+"RESPUESTA 4": "13",
+"RESPUESTA 5": "1023"
+},
+{
+"PREGUNTA": "En relacion a los registros de configuracion del AD
+a) El registro ADxCON3 es el encargado de configurar el _________.
+b) El bit ADRC se utiliza para seleccionar la ___________ del temporizador. Se utilizara el reloj externo o el interno?.
+c) El bit SAMC se utiliza para habilitar el numero de ciclos de ___________ (n) y tarda esas n veces _______.
+d) El bit ADCS se utiliza para establecer el ___________ y obtener el tiempo TAD.",
+"HUECOS": 5,
+"RESPUESTA 1": "reloj",
+"RESPUESTA 2": "frecuencia",
+"RESPUESTA 3": "muestreo",
+"RESPUESTA 4": "TAD",
+"RESPUESTA 5": "preescalado"
+},
+{
+"PREGUNTA": "En el registro ADxCON2
+a) El bit CSCNA se utiliza para habilitar _________.
+b) El bit BUFM se utiliza para habilitar ___________ .
+c) El bit BUFS se utiliza en modo doble buffer para indicar de donde se lee (1) parte ___________ y (0) parte _______.
+d) El bit SMPI sirve para indicar el numero de  ___________ antes de saltar la interrupcion.",
+"HUECOS": 5,
+"RESPUESTA 1": "el escaneo automatico",
+"RESPUESTA 2": "el uso de doble buffer",
+"RESPUESTA 3": "baja",
+"RESPUESTA 4": "alta",
+"RESPUESTA 5": "las conversiones"
+},
+{
+"PREGUNTA": " El registro ADxCON1 tiene los bits de encendido (ON) y otros encargados de:
+a) El registro SAMP sirve para empezar ___________ cuando se pone a 1 y para iniciar ____________ si se pone a 0.
+b) El registro ASAM sirve para poner el modo de muestreo:   ___________ (1) y ________(0).
+c) Cuando la conversion se hace en ___________ hay que vigilar que acaba con el registro DONE.
+d) El registro SSRC indica como empieza  ___________ ya sea con numero o con el timer.",
+"HUECOS": 6,
+"RESPUESTA 1": "el muestreo",
+"RESPUESTA 2": "la conversion",
+"RESPUESTA 3": "automatico",
+"RESPUESTA 4": "manual",
+"RESPUESTA 5": "manual",
+"RESPUESTA 6": "la conversion"
+},
+{
+"PREGUNTA": "En el AD funcionando con:
+a) Conversion no secuencial se usa _______ para elegir el canal.
+b) En cambio en modo secuencial de canales se debe usar _______ para la seleccion y que internamente avance en orden creciente.
+c) Hay que recordar que el canal y el pin son cosas distintas, el pin debe configurarse en ____________.",
+"HUECOS": 3,
+"RESPUESTA 1": "AD1CHS",
+"RESPUESTA 2": "AD1CSSL",
+"RESPUESTA 3": "ANSELx",
+
+}
+]

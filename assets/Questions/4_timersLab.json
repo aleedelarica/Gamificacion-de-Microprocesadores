@@ -1,0 +1,71 @@
+[
+{
+"PREGUNTA": "Cuales son los primeros pasos para configurar y utilizar el temporizador 1 (tipo A) en el PIC32?
+a) Primero, se debe configurar el registro ___________ para definir la fuente de reloj que se utilizara y asegurarse de que el temporizador esta apagado.
+b) Luego, se debe configurar el registro ___________ para resetear el valor de conteo del temporizador, es decir, poner la cuenta a 0.
+c) Seguidamente, se debe acceder al registro ___________ y ponerlo a cero, borrar el flag del temporizador.
+d) A continuacion, se debe configurar el registro ___________ para definir el limite de la cuenta, cuando debe saltar el flag o cuanto tiempo se quiere medir.
+e) Finalmente, se debe habilitar el temporizador mediante el registro ___________.",
+"HUECOS": 5,
+"RESPUESTA 1": "T1CON",
+"RESPUESTA 2": "TMR1",
+"RESPUESTA 3": "IFS0bits.T1IF",
+"RESPUESTA 4": "PR1",
+"RESPUESTA 5": "T1CON"
+},
+{
+"PREGUNTA": "Cuales son las funciones de los bits de configuracion del registro TxCON en un temporizador Tipo B del PIC32?
+a) El bit TCKPS se utiliza para definir el ___________ del temporizador.
+b) El bit TCS se utiliza para seleccionar la ___________ del temporizador. Se utilizara el reloj externo o el interno?.
+c) El bit TGATE se utiliza para habilitar el modo ___________.
+d) El bit ON se utiliza para ___________ o ___________ el temporizador.",
+"HUECOS": 4,
+"RESPUESTA 1": "preescalado",
+"RESPUESTA 2": "fuente",
+"RESPUESTA 3": "gated",
+"RESPUESTA 4": "encender",
+"RESPUESTA 5": "apagar"
+},
+{
+"PREGUNTA": "Cuales son las funciones de los tres registros principales de un temporizador, por ejemplo el TIMER 3 en el PIC32?
+a) El registro ___________ se utiliza para almacenar el valor de conteo actual del temporizador.
+b) El registro ___________ se utiliza para definir el valor de conteo inicial del temporizador.
+c) El registro ___________ se utiliza para configurar las opciones de operacion del temporizador, como la fuente de reloj, el encendido y apagado, el preescalado y la habilitacion de interrupciones.",
+"HUECOS": 3,
+"RESPUESTA 1": "TMR3",
+"RESPUESTA 2": "PR3",
+"RESPUESTA 3": "T3CON"
+},
+{
+"PREGUNTA": "Que registros se deben configurar para utilizar el temporizador 2 y 3 (tipo B) en modo 32 bits?
+a) Primero, se debe configurar el registro ___________ para parar el temporizador 2 y el registro ___________ para parar el temporizador 3.
+b) Luego, se debe configurar el registro ___________ para activar el modo 32 bits.
+c) Seguidamente, se debe configurar el registro ___________ para poner la cuenta a 0.
+d) A continuacion, se debe borrar el flag en el registro ___________.
+e) Despues, se debe acceder al registro _________ para definir el limite de cuenta.
+f) Finalmente, se debe habilitar el temporizador mediante el registro ___________ y configurar el registro correspondiente para habilitar las interrupciones. ",
+"HUECOS": 6,
+"RESPUESTA 1": "T2CON",
+"RESPUESTA 2": "T3CON",
+"RESPUESTA 2": "T2CON",
+"RESPUESTA 3": "TMR2",
+"RESPUESTA 4": "IFS0bits.T3IF",
+"RESPUESTA 5": "PR2",
+"RESPUESTA 6": "T2CON"
+},
+{
+"PREGUNTA": "Sobre el remapeo de pines:
+a) Para remapear pines de INPUT, se debe definir de _______ a ________ y para pines de OUTPUT, al contrario.
+b) Para desbloquear la escritura de estos registros hay que escribir en el registro _______ los valores ___________ y __________ de forma consecutiva.
+c) Si se quiere conectar el pin T2CK a RPB15, la linea a escribir seria ____________. 
+d) Si se quiere conectar el pin OC4 al pin RPC1, la linea a escribir seria ____________.",
+"HUECOS": 3,
+"RESPUESTA 1": "pin",
+"RESPUESTA 2": "funcionalidad",
+"RESPUESTA 3": "SYSKEY",
+"RESPUESTA 4": "0xAA996655",
+"RESPUESTA 5": "0x556699AA",
+"RESPUESTA 6": "T2CKR=3",
+"RESPUESTA 7": "RPC1R=5"
+}
+]

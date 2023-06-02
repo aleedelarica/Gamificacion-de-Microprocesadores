@@ -1,0 +1,70 @@
+[
+{
+"PREGUNTA": "Cual es orden de llamar a los registros del OUTPUT COMPARE en el PIC32?
+a) Primero, se debe remapear usando un registro similar a ___________ para conectar la salida del OC con el pin que corresponda.
+b) Entonces, se inicia la configuracion apagando el periferico con el registro ___________ .
+c) Luego, se debe configurar los registros ___________ con un valor distinto de 0, para indicar el tiempo a 1 inicial del PWM y que es dependiente del PRx.
+d) Seguidamente, se debe encender el periferico en modo PWM (OCM=110) usando el registro ___________.
+e) En el anterior registro se debe seleccionar el ___________ para definir cual se quiere usar.
+f) Finalmente, se debe configurar el seleccionado, sin tener encuenta flags y asi establecer el periodo del PWM usando el registro ___________.",
+"HUECOS": 6,
+"RESPUESTA 1": "RPzyR",
+"RESPUESTA 2": "OCxCON",
+"RESPUESTA 3": "OCxR y OCxRS",
+"RESPUESTA 4": "OCxCON",
+"RESPUESTA 5": "Timer2 o el Timer3"
+"RESPUESTA 6": "PRx"
+},
+{
+"PREGUNTA": "En el OC que hace el que?
+a) El registro PR del temporizador se usa para indicar ___________ de la onda.
+b) Los registros OCxRS y OCxR establecen el ___________ de la onda.
+c) El bit OC32 del OCxCON se utiliza para habilitar el modo ___________.
+d) El bit OCTSEL se utiliza para elegir el (0) ___________ o (1) ___________ .",
+"HUECOS": 5,
+"RESPUESTA 1": "periodo",
+"RESPUESTA 2": "duty cycle",
+"RESPUESTA 3": "32bits",
+"RESPUESTA 4": "Timer 2",
+"RESPUESTA 5": "Timer 3"
+},
+{
+"PREGUNTA": "Que tiempos y frecuencias son tipicos en señales PWM?
+a) El servo 180º que fija la posicion de un motor tiene un periodo de ___________ .
+b) En un servo de 180º los tiempos oscilan entre ___________ .
+c) Los motores suelen requerir señales de ___________ donde dependiendo de si se usa un puente en H el estar parado es el 50% de la señal (con puente en H) o un 0%.",
+"HUECOS": 3,
+"RESPUESTA 1": "20ms",
+"RESPUESTA 2": "1-2ms",
+"RESPUESTA 3": "20kHz"
+},
+{
+"PREGUNTA": "Que cosas pasadas usamos de otros temas, VERDADERO o FALSO?
+a) Flags: ___________.
+b) Interrupciones: ___________ .
+c) TMR: ___________ .
+d) Remapeo: ___________.
+e) PR: _________ .
+f) Frecuencia perifericos 5MHz: ________ . ",
+"HUECOS": 6,
+"RESPUESTA 1": "FALSO",
+"RESPUESTA 2": "VERDADERO",
+"RESPUESTA 3": "VERDADERO",
+"RESPUESTA 4": "VERDADERO",
+"RESPUESTA 5": "VERDADERO",
+"RESPUESTA 6": "VERDADERO"
+},
+{
+"PREGUNTA": "Sobre el remapeo de pines:
+a) Para remapear los pines del OC, se debe definir de _______ a ________ .
+b) Para desbloquear la escritura de estos registros hay que escribir en el registro _______ los valores ___________ y __________ de forma consecutiva.
+c) Si se quiere conectar el pin OC4 al pin RPC1, la linea a escribir seria ____________.",
+"HUECOS": 6,
+"RESPUESTA 1": "funcionalidad",
+"RESPUESTA 2": "pin",
+"RESPUESTA 3": "SYSKEY",
+"RESPUESTA 4": "0xAA996655",
+"RESPUESTA 5": "0x556699AA",
+"RESPUESTA 6": "RPC1R=5"
+}
+]

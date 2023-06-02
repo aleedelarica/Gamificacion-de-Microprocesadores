@@ -1,0 +1,118 @@
+[
+  {
+    "PREGUNTA": "Para que funcione el pulsador necesito poner ______(1) como digital y un uno en _______(2).",
+    "HUECOS": 2,
+    "OPCIONES": 4,
+    "OPCION A": "TRISx",
+    "OPCION B": "ANSELx",
+    "OPCION C": "LATx",
+    "OPCION D": "PORTx",
+    "ENTRADA 1": "ANSELx",
+    "ENTRADA 2": "TRISx"
+  },
+  {
+    "PREGUNTA": "Para que funcione el pulsador al mismo tiempo que el timer debo funcionar en modo _____(1) y actualizar el valor _____(2) del while",
+    "HUECOS": 2,
+    "OPCIONES": 5,
+    "OPCION A": "Polling",
+    "OPCION B": "Interrupciones",
+    "OPCION C": "antes",
+    "OPCION D": "dentro",
+    "OPCION E": "después",
+    "ENTRADA 1": "Interrupciones",
+    "ENTRADA 2": "dentro"
+  },
+  {
+    "PREGUNTA": "Si no salta la interrupcion debo comprobar que tengo ______(1), y puedo poner un breakpoint en ______(2), 
+	para comprobar que si salta. Si el problema es que la velocidad no es la esperada debo ver que tengo ____(3) y _____(4).",
+    "HUECOS": 4,
+    "OPCIONES": 6,
+    "OPCION A": "incluido el pic32Ini.h/.c en el proyecto",
+    "OPCION B": "el MVEC y asm('ei'), el IE del periferico y que la prioridad es la del IPLxSOFT",
+    "OPCION C": "el flag=0 en el inicio de la interrupcion",
+    "OPCION D": "el PR bien calculado",
+    "OPCION E": "el TMR = 0",
+    "OPCION F": "el nombre de la interrupcion bien",
+    "ENTRADA 1": "el MVEC y asm('ei'), el IE del periferico y que la prioridad es la del IPLxSOFT",
+    "ENTRADA 2": "el flag=0 en el inicio de la interrupcion",
+    "ENTRADA 3": "incluido el pic32Ini.h/.c en el proyecto",
+    "ENTRADA 4": "el PR bien calculado"
+  },
+  {
+    "PREGUNTA": "En el caso de la UART, siempre se conecta el conector __(1) para los 5V, en TX del micro el __(2) del HC-06 y en el RX del micro el __(3)",
+    "HUECOS": 3,
+    "OPCIONES": 4,
+    "OPCION A": "plateado",
+    "OPCION B": "RX",
+    "OPCION C": "TX",
+    "OPCION D": "programador",
+    "ENTRADA 1": "plateado",
+    "ENTRADA 2": "RX",
+    "ENTRADA 3": "TX"
+  },
+  {
+    "PREGUNTA": "El servo tiene tres cables, el negro - _______(1), el rojo - _____(2) y el blanco - _____(3).",
+    "HUECOS": 3,
+    "OPCIONES": 3,
+    "OPCION A": "GND",
+    "OPCION B": "VCC",
+    "OPCION C": "PWM",
+    "ENTRADA 1": "GND",
+    "ENTRADA 2": "VCC",
+    "ENTRADA 3": "PWM"
+  },
+ 
+  {
+    "PREGUNTA": "Para detectar un flanco de bajada la forma correcta de codificarlo es: 
+		#include <xc.h>
+		#define PIN_PULSADOR 5
+		int main(void) {
+			ANSELB &= ~(1<<PIN_PULSADOR); TRISB = 1<<PIN_PULSADOR;
+			int pulsador;
+			while (1) {
+				_________________(1)
+			}
+		return 0; 
+		}",
+    "HUECOS": 1,
+    "OPCIONES": 3,
+    "OPCION A": "pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+if (pulsador == 0) {
+      
+}",
+    "OPCION B": "pulsador_ant = pulsador;
+pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+if (pulsador!=pulsador_ant && pulsador==0) {
+
+}",
+    "OPCION C": "pulsador_ant = pulsador;
+pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+if (pulsador > pulsador_ant) {
+
+}",
+    "ENTRADA 1": "pulsador_ant = pulsador;
+pulsador = (PORTB >> PIN_PULSADOR) & 0x1;
+if (pulsador!=pulsador_ant && pulsador==0) {
+
+}"
+  },  {
+    "PREGUNTA": "Tengo que acordarme que los LEDs son activos a nivel ___(1) y que el pulsador es activo ___(2).",
+    "HUECOS": 2,
+    "OPCIONES": 2,
+    "OPCION A": "alto",
+    "OPCION B": "bajo",
+    "ENTRADA 1": "bajo",
+    "ENTRADA 2": "bajo"
+  }
+  
+  {
+    "PREGUNTA": "PREGUNTA FINAL: Si quiero generar una onda periodica al mismo tiempo que otras cosas puedo usar ___(1) por interrupciones o el ___(2), mientras que si quiero que no se haga nada mas que la señal podria usar un ____(3) por polling",
+    "HUECOS": 3,
+    "OPCIONES": 2,
+    "OPCION A": "Timer",
+    "OPCION B": "OC",
+    "ENTRADA 1": "Timer",
+    "ENTRADA 2": "OC",
+    "ENTRADA 3": "Timer"
+  }
+]

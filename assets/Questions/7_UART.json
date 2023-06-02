@@ -1,0 +1,68 @@
+[
+{"PREGUNTA":"Cual no es un tipo de paridad?",
+"OPCION 1":"a. N",
+"OPCION 2":"b. E",
+"OPCION 3":"c. O",
+"OPCION 4":"d. D",
+"CORRECTA":"d. D"
+},
+{
+"PREGUNTA": "Que error es el admisible para seleccionar el BRGH?",
+"OPCION 1": "a. 2%",
+"OPCION 2": "b. 5%",
+"OPCION 3": "c. 10%",
+"OPCION 4": "d. Ninguna de las anteriores",
+"CORRECTA": "a. 2%"
+},
+{
+"PREGUNTA": "La UART en polling usa:",
+"OPCION 1": "a. El flag de transmision y de recepcion",
+"OPCION 2": "b. Los modos de interrupcion de TX (ITXISEL)",
+"OPCION 3": "c. Los modos de interrupcion de RX (IRXISEL)",
+"OPCION 4": "d. Los bits de URXDA y TRMT",
+"CORRECTA": "d. Los bits de URXDA y TRMT"
+},
+{
+"PREGUNTA": "La UART en modo interrupcion usa:",
+"OPCION 1": "a. El flag de transmision y de recepcion",
+"OPCION 2": "b. Los modos de interrupcion de TX (ITXISEL) y de RX (IRXISEL)",
+"OPCION 3": "c. Los registros de configuracion de interrupcion (UxIP, UxIE, UxIS)",
+"OPCION 4": "d. Todos",
+"CORRECTA": "d. Todos"
+},
+{
+"PREGUNTA": "Para que sirve una estructura?",
+"OPCION 1": "a. Para complicar las cosas",
+"OPCION 2": "b. Para definir un tipo de variable que dentro 
+   tiene varios tipos de variable y evitar 
+   crear muchisimas variables cuando se usan 
+   varias de este tipo.",
+"OPCION 3": "c. Para sustituir a un vector",
+e
+"OPCION 4": "d. Para definir un tipo de variable que dentro
+   tiene tipos de variable que tienen el
+   mismo tamaño en bits y asi no ocupar
+   mas espacio de memoria.",
+"CORRECTA": "b. Para definir un tipo de variable que dentro 
+   tiene varios tipos de variable y evitar 
+   crear muchisimas variables cuando se usan 
+   varias de este tipo."
+},
+{
+"PREGUNTA": "Que remapeo es el de UART1 RX en RB2 y TX en RB3",
+"OPCION 1": "a. U1RXR= 2 y RPB3R = 2",
+"OPCION 2": "b. U1TXR= 3 y RPB2R = 3",
+"OPCION 3": "c. U1RXR= 4 y RPB3R = 1",
+"OPCION 4": "d. U1TXR= 4 y RPB3R = 3",
+"CORRECTA": "c. U1RXR= 4 y RPB3R = 1"
+},
+{
+"PREGUNTA": "Que permite la cola circular?",
+"OPCION 1": "a. No hay diferencia con el uso de un vector de recepcion
+   que se reinicia cada vez que llega un mensaje",
+"OPCION 2": "b. Tener cierto nivel de almacenamiento a la hora de procesar datos",
+"OPCION 3": "c. Una gestion más sencilla de un vector y ocupa el mismo espacio",
+"OPCION 4": "d. Garantiza el procesamiento de todos los mensajes",
+"CORRECTA": "b. Tener cierto nivel de almacenamiento a la hora de procesar datos"
+}
+]

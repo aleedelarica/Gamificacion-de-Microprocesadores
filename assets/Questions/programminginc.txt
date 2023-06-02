@@ -1,0 +1,9 @@
+Pregunta,OpcionA,OpcionB,OpcionC,OpcionD,Respuesta
+¿Cuál es la estructura básica de un programa en C?, a. int main() {return 0;}, b. #include <stdio.h>, c. void main() {return 0;}, d. #include <conio.h>, a. int main() {return 0;}
+¿Qué hace la función printf en C?, a. Lee la entrada del usuario, b. Imprime la salida en la pantalla, c. Realiza cálculos aritméticos, d. Ninguna de las anteriores, b. Imprime la salida en la pantalla
+¿Cuál es la diferencia entre = y == en C?, a. = se utiliza para asignar un valor a una variable mientras que == se utiliza para comparar valores, b. = y == son la misma cosa, c. = se utiliza para comparar valores mientras que == se utiliza para asignar un valor a una variable, d. Ninguna de las anteriores, a. = se utiliza para asignar un valor a una variable mientras que == se utiliza para comparar valores
+¿Cuál es el propósito de la declaración if en C?, a. Para ejecutar un bloque de código si se cumple una cierta condición, b. Para asignar un valor a una variable, c. Para imprimir la salida en la pantalla, d. Ninguna de las anteriores, a. Para ejecutar un bloque de código si se cumple una cierta condición
+¿Cuál es el valor de la expresión 5 % 2?, a. 1, b. 2, c. 0, d. 3, a. 1
+¿Qué tipo de datos se utiliza para almacenar valores decimales en C?, a. int, b. char, c. float, d. double, c. float
+¿Cuál es el valor máximo que se puede almacenar en un tipo de datos short int en C?, a. 32767, b. 65535, c. 2147483647, d. 9223372036854775807, a. 32767
+¿Qué es el uso de la declaración break en C?, a. Para salir de un bucle, b. Para continuar con la siguiente iteración de un bucle, c. Para ir a la siguiente línea en la salida, d. Ninguna de las anteriores, a. Para salir de un bucle
