@@ -1,5 +1,10 @@
 package IO;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.utils.JsonReader;
+import com.badlogic.gdx.utils.JsonValue;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -14,40 +19,30 @@ public class ReadTests {
      * @throws IOException If there is an error reading the file.
      */
     public static HashMap<Integer, ArrayList<String>> loadTests()
-    {   
+    {
         //Create empty hashmap of tests
         HashMap<Integer, ArrayList<String>> tests= new HashMap<>();
-        try
-        {
-            //Open txt file
-            FileReader fr = new FileReader("Questions/tests.txt");
-            BufferedReader br= new BufferedReader(fr);
+        FileHandle file = Gdx.files.internal("Questions/tests.json");
+        JsonReader jsonReader = new JsonReader();
+        JsonValue baseValue = jsonReader.parse(file);
 
-            br.readLine();
-
-            String line= br.readLine();
-
+        // Loop through each JSON object in the array
+        for (JsonValue value : baseValue) {
             //Loop through each line in file and get data
-            while(line!= null) {
-                String s[]= line.split(",");
-                int testNumber = Integer.parseInt(s[0]);
-                String type = s[1].trim();
-                String name = s[2].trim();
+            int testNumber = value.getInt("TestNum");
+            String type = value.getString("TestType");
+            String name = value.getString("FileName");
 
-                ArrayList<String> data = new ArrayList<>();
 
-                data.add(type);
-                data.add(name);
+            ArrayList<String> data = new ArrayList<>();
 
-                tests.put(testNumber, data);
+            data.add(type);
+            data.add(name);
 
-                line= br.readLine();
-            }
+            tests.put(testNumber, data);
+
         }
-        catch(IOException ioe)
-        {
-            ioe.printStackTrace();
-        }
+
         return tests;
     }
 }

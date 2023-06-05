@@ -374,7 +374,7 @@ public class GameScreen extends ScreenAdapter{
         if (write){
             count+=1;
 
-            if(count == 2){
+            if(count == 1){
                 label.setText(text.substring(0, letterCount));
                 letterCount+=1;
                 count = 0;
