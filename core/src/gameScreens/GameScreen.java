@@ -193,7 +193,7 @@ public class GameScreen extends ScreenAdapter{
         Table table=new Table();
 
         //Create all the components of the window
-        Label titleLabel=new Label("AJUSTES ",skinSettings);
+        Label titleLabel=new Label("AJUSTES\nTeclas - Movimiento: W A S D\nTeclas - Hablar: E",skinSettings);
         Label volLabel=new Label("Volumen: ",skinSettings);
         final Slider volSlider= new Slider(0,100,5,false,skinSettings);
         volSlider.setSize(200,50);

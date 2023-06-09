@@ -41,7 +41,7 @@ se utiliza para asignar un valor a una variable",
 "CORRECTA": "a. 1"
 },
 {
-"PREGUNTA": "Que tipo de datos se utiliza para almacenar valores decimales en C?",
+"PREGUNTA": "Que tipo de datos se utiliza para almacenar valores decimales en C y que ocupa menos espacio?",
 "OPCION 1": "a. int",
 "OPCION 2": "b. char",
 "OPCION 3": "c. float",
