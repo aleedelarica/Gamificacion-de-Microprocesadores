@@ -90,7 +90,7 @@ public class Game extends com.badlogic.gdx.Game {
 		menuMusic = Gdx.audio.newMusic(Gdx.files.internal("Music/song.ogg"));
 		menuMusic.setLooping(true);
 		menuMusic.play();
-		menuMusic.setVolume(0.3f);
+		menuMusic.setVolume(0.1f);
 
 		//Set main screen to the title screen
 		setScreen(titleScreen);
@@ -358,6 +358,10 @@ public class Game extends com.badlogic.gdx.Game {
 
 	public int getLives() {
 		return lives;
+	}
+
+	public void setLives(int l) {
+		lives=l;
 	}
 
 	public void setMusicVolume(float volume){

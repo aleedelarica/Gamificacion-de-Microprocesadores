@@ -303,11 +303,21 @@ public class GameScreen extends ScreenAdapter{
                     npcInteractTest=(NPCTest)npcInteract;
 
                     int nextPrueba = game.getNextTestNumber();
-                    if(nextPrueba==npcInteractTest.getAssociatedTestNumber()){
-                        text = npcInteract.getName()+": "+npcInteractTest.getNpcDialog();
-                    }
-                    else{
-                        text = npcInteractTest.getName()+": "+((NPCTest)npc.get(nextPrueba-1)).getRestDialog();
+                    if(nextPrueba > 140){
+                        text = npcInteract.getName()+": Debes repasar el laboratorio para afianzar el tema antes del siguiente";
+                    }else{
+
+                        if(nextPrueba==npcInteractTest.getAssociatedTestNumber()){
+                            text = npcInteract.getName()+": "+npcInteractTest.getNpcDialog();
+                        }
+                        else{
+                            String name = npcInteractTest.getName();
+                            String nameLive = "Fran";
+                            if(name.equals(nameLive)){
+                                game.setLives(3);
+                            }
+                            text = npcInteractTest.getName()+": "+((NPCTest)npc.get(nextPrueba-1)).getRestDialog();
+                        }
                     }
 
                     if (portrait != null) {

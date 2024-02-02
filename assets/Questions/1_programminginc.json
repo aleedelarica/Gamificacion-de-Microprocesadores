@@ -1,18 +1,18 @@
 [
-{"PREGUNTA":"¿Cual es la estructura basica de un programa en C?",
-"OPCION 1":"a. int main() {return 0;}",
+{"PREGUNTA":"¿Cual es la estructura basica de un programa en C para un micro?",
+"OPCION 1":"a. int main() {while(1); return 0;}",
 "OPCION 2":"b. #include <stdio.h>",
 "OPCION 3":"c. void main() {return 0;}",
 "OPCION 4":"d. #include <conio.h>",
 "CORRECTA":"a. int main() {return 0;}"
 },
 {
-"PREGUNTA": "Que hace la funcion printf en C?",
-"OPCION 1": "a. Lee la entrada del usuario",
-"OPCION 2": "b. Imprime la salida en la pantalla",
-"OPCION 3": "c. Realiza cálculos aritméticos",
-"OPCION 4": "d. Ninguna de las anteriores",
-"CORRECTA": "b. Imprime la salida en la pantalla"
+"PREGUNTA": "Que hace la máscara OR en C cuando se aplica como A|=B?",
+"OPCION 1": "a. Pone un 0 en los bits de A donde haya un 1 en los bits de B",
+"OPCION 2": "b. Pone un 1 en los bits de A donde haya un 0 en los bits de B",
+"OPCION 3": "c. Pone un 1 en los bits de A donde haya un 1 en los bits de B",
+"OPCION 4": "d. Pone un 0 en los bits de A donde haya un 0 en los bits de B",
+"CORRECTA": "c. Pone un 1 en los bits de A donde haya un 1 en los bits de B"
 },
 {
 "PREGUNTA": "Cual es la diferencia entre = y == en C?",
@@ -34,11 +34,11 @@ se utiliza para asignar un valor a una variable",
 },
 {
 "PREGUNTA": "Cual es el valor de la expresion 5 % 2?",
-"OPCION 1": "a. 1",
+"OPCION 1": "a. 3",
 "OPCION 2": "b. 2",
 "OPCION 3": "c. 0",
-"OPCION 4": "d. 3",
-"CORRECTA": "a. 1"
+"OPCION 4": "d. 1",
+"CORRECTA": "d. 1"
 },
 {
 "PREGUNTA": "Que tipo de datos se utiliza para almacenar valores decimales en C y que ocupa menos espacio?",
@@ -49,19 +49,27 @@ se utiliza para asignar un valor a una variable",
 "CORRECTA": "c. float"
 },
 {
-"PREGUNTA": "Cual es el valor maximo que se puede almacenar en un tipo de datos short int en C?",
-"OPCION 1": "a. 32767",
+"PREGUNTA": "Cual es el valor maximo que se puede almacenar en un tipo de datos int16_t en C?",
+"OPCION 1": "a. 9223372036854775807",
 "OPCION 2": "b. 65535",
 "OPCION 3": "c. 2147483647",
-"OPCION 4": "d. 9223372036854775807",
-"CORRECTA": "a. 32767"
+"OPCION 4": "d. 32767",
+"CORRECTA": "d. 32767"
 },
 {
-"PREGUNTA": "Que es el uso de la declaracion break en C?",
-"OPCION 1": "a. Para salir de un bucle",
-"OPCION 2": "b. Para continuar con la siguiente iteracion de un bucle",
-"OPCION 3": "c. Para ir a la siguiente linea en la salida",
-"OPCION 4": "d. Ninguna de las anteriores",
-"CORRECTA": "a. Para salir de un bucle"
+"PREGUNTA": "Que hace la máscara AND en C cuando se aplica como A (AND=) B?",
+"OPCION 1": "a. Pone un 0 en los bits de A donde haya un 1 en los bits de B",
+"OPCION 2": "b. Pone un 1 en los bits de A donde haya un 0 en los bits de B",
+"OPCION 3": "c. Pone un 1 en los bits de A donde haya un 1 en los bits de B",
+"OPCION 4": "d. Pone un 0 en los bits de A donde haya un 0 en los bits de B",
+"CORRECTA": "d. Pone un 0 en los bits de A donde haya un 0 en los bits de B"
+},
+{
+"PREGUNTA": "Que hace la máscara XOR en C cuando se aplica como A ^= B?",
+"OPCION 1": "a. Pone un 0 en los bits de A donde haya un 1 en los bits de B",
+"OPCION 2": "b. Pone un 1 en los bits de A donde haya un 0 en los bits de B",
+"OPCION 3": "c. Invierte el bit de A donde haya un 1 en los bits de B",
+"OPCION 4": "d. Invierte el bit de A donde haya un 0 en los bits de B",
+"CORRECTA": "c. Invierte el bit de A donde haya un 1 en los bits de B"
 }
 ]
