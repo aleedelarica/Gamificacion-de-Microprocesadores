@@ -1,6 +1,6 @@
 [
   {
-    "PREGUNTA": "En el registro TRISX un 1 significa ______(1) mientras que un cero indica _______(2).",
+    "PREGUNTA": "En el registro TRISx un 1 significa ______(1) mientras que un cero indica _______(2).",
     "HUECOS": 2,
     "OPCIONES": 2,
     "OPCION A": "Input o entrada",
@@ -20,7 +20,7 @@
     "ENTRADA 2": "Bajo"
   },
   {
-    "PREGUNTA": "En el registro ANSELX por defecto, todos sus bits estan a ___(1), lo que marca que los input estan definidos como ______(2), por lo que en caso de utilizar un bit de TRISX, habria que marcar ese bit en ANSELX con un ____(3) para indicar que se trata de una entrada _____(4)",
+    "PREGUNTA": "En el registro ANSELx por defecto, todos sus bits estan a ___(1), lo que marca que los input estan definidos como ______(2), por lo que en caso de utilizar un bit de TRISX, habria que marcar ese bit en ANSELX con un ____(3) para indicar que se trata de una entrada _____(4)",
     "HUECOS": 4,
     "OPCIONES": 4,
     "OPCION A": "Digital",
@@ -33,7 +33,7 @@
     "ENTRADA 4": "Digital"
   },
   {
-    "PREGUNTA": "En caso de leer PORTX de un pin analogico, siempre see leera un __(1)",
+    "PREGUNTA": "En caso de leer PORTx de un pin analogico, siempre see leera un __(1)",
     "HUECOS": 1,
     "OPCIONES": 3,
     "OPCION A": 0,
@@ -42,7 +42,7 @@
     "ENTRADA 1": 0
   },
   {
-    "PREGUNTA": "TRISB determina que bits de B son PORTB, es decir de _______(1) y cuales son LATB, es decir de _____(2).",
+    "PREGUNTA": "TRISB determina que bits de B usan PORTB, es decir de _______(1) y cuales usan LATB, es decir de _____(2).",
     "HUECOS": 2,
     "OPCIONES": 2,
     "OPCION A": "Escritura",

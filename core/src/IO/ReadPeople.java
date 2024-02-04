@@ -43,7 +43,7 @@ public class ReadPeople {
         NPC zipi=new NPCNoTest(91,19,"People/Secundarios/Zipi.png","Zipi","Que te pongo?");
         NPC zape=new NPCNoTest(91,15,"People/Secundarios/Zape.png","Zape","Quieres un Charlie? Claro, sin problema.");
         NPC pau=new NPCNoTest(89,7,"People/Secundarios/Pau.png","Pau","Yo soy de ICADE, mejor busca a otro");
-        NPC josedani=new NPCNoTest(126,82,"People/Secundarios/Jose Daniel.png","Jose Daniel","Ponte a estudiar");
+        NPC josedani=new NPCNoTest(126,82,"People/Secundarios/Edu.png","Edu","Ponte a estudiar, puedes empezar por el tema 1");
 
         //Add them to the list
         people.add(zipi);

@@ -17,10 +17,6 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
-import com.badlogic.gdx.scenes.scene2d.ui.Button;
-import com.badlogic.gdx.scenes.scene2d.ui.Dialog;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
@@ -74,10 +70,12 @@ public class GameScreen extends ScreenAdapter{
     private Skin skinDialog;
     private Skin skin;
     private Skin skinSettings;
+    private Skin skinScroll;
 
     //Stages
     private Stage stageDialog;
     private Stage stageLives;
+    private Stage stageText;
 
     //Dialog variables
     private Label label;
@@ -116,6 +114,7 @@ public class GameScreen extends ScreenAdapter{
 
         stageDialog = new Stage(new ScreenViewport());
         stageLives=new Stage(new ScreenViewport());
+        stageText=new Stage(new ScreenViewport());
 
         loadSkins();
 
@@ -160,6 +159,7 @@ public class GameScreen extends ScreenAdapter{
         skinDialog = new Skin(Gdx.files.internal("SkinDialog/terra-mother-ui.json"));
         skin = new Skin(Gdx.files.internal("Skin/flat-earth-ui.json"));
         skinSettings=new Skin(Gdx.files.internal("SkinSettings/cloud-form-ui.json"));
+        skinScroll=new Skin(Gdx.files.internal("SkinScroll/uiskin.json"));
     }
 
     /**
@@ -193,7 +193,12 @@ public class GameScreen extends ScreenAdapter{
         Table table=new Table();
 
         //Create all the components of the window
-        Label titleLabel=new Label("AJUSTES\nTeclas - Movimiento: W A S D\nTeclas - Hablar: E",skinSettings);
+        Label titleLabel=new Label("AJUSTES\nTeclas - Movimiento: W A S D\nTeclas - Hablar: E\n" + //
+                "Otras Teclas - Enter y Esc",skinSettings);
+        Label authorsLabel=new Label("MainAuthor: Alejandra De La Rica\n" +
+        "Mantainer and New Features: Francisco Martin\n" +
+        "Bugs Report: fmartin@comillas.edu\n" +
+        "v1.1 2024",skinSettings);
         Label volLabel=new Label("Volumen: ",skinSettings);
         final Slider volSlider= new Slider(0,100,5,false,skinSettings);
         volSlider.setSize(200,50);
@@ -204,13 +209,14 @@ public class GameScreen extends ScreenAdapter{
         Button closeSettingsButton=new TextButton("Cerrar Configuracion",skinSettings);
 
         //Add components to the table
-        table.add(titleLabel).colspan(2).pad(25).padBottom(25).row();
+        table.add(titleLabel).colspan(2).pad(25).padBottom(25);
+        table.add(closeSettingsButton).colspan(2).pad(25).row();
         table.add(volLabel).pad(25);
         table.add(volSlider).pad(25).width(200).row();
         table.add(saveLabel).pad(25);
         table.add(saveButton).pad(25);
         table.add(saveCloseButton).pad(25).row();
-        table.add(closeSettingsButton).colspan(2).pad(25);
+        table.add(authorsLabel).colspan(2).pad(25).padBottom(25).row();
 
         //Add table to settings window
         settingsBox.add(table);
@@ -414,6 +420,16 @@ public class GameScreen extends ScreenAdapter{
 
         stageLives.act(delta);
         stageLives.draw();
+
+        TextArea textArea = new TextArea(
+            "Prueba " + String.valueOf(game.getNextTestNumber() + "/13"),
+            skinScroll);
+        textArea.setX(400);
+        textArea.setY(585);
+        stageText.addActor(textArea);
+        stageText.draw();
+        
+
     }
 
     /**

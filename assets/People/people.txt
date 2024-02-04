@@ -11,7 +11,7 @@ ESC para salir",
 "Personaje de la prueba": "Hola! Estoy esperando a Fran, para que me resuelva alguna duda de puertos de entrada y salida del microprocesador. Tienes un rato?
 ENTER para realizar prueba
 ESC para salir",
-"El resto de personajes": "Si no tienes donde ir, Daniel estaba en la puerta del despacho de Fran, el D-10. Tenia alguna duda."
+"El resto de personajes": "Si no tienes donde ir, Javi estaba en la puerta del despacho de Fran, el D-10. Tenia alguna duda."
 },
 {
 "Prueba": 3,
@@ -88,6 +88,6 @@ ESC para salir",
 "Personaje de la prueba": "Preparado par el examen final?
 ENTER para realizar prueba
 ESC para salir",
-"El resto de personajes": "Fran y Jose Daniel te estan esperando en el aula O-202 de ICADE para el examen final. Estas preparado?"
+"El resto de personajes": "Fran y Edu te estan esperando en el aula O-202 de ICADE para el examen final. Estas preparado?"
 }
 ]

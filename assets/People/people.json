@@ -8,7 +8,7 @@
 Te puedo hacer alguna pregunta?
 ENTER para realizar prueba
 ESC para salir",
-"El resto de personajes": "Me ha dicho Bruno que necesitaba tu ayuda. esta esperándote en el laboratorio 1."
+"El resto de personajes": "Me ha dicho Bruno que necesitaba tu ayuda. Esta esperándote en el laboratorio 1."
 },
 {
 "Prueba": 2,
@@ -19,7 +19,7 @@ ESC para salir",
 de entrada y salida del microprocesador. Tienes un rato?
 ENTER para realizar prueba
 ESC para salir",
-"El resto de personajes": "Si no tienes donde ir, Dani estaba en la puerta del despacho de Fran, el D-10.
+"El resto de personajes": "Si no tienes donde ir, Javi estaba en la puerta del despacho de Fran, el D-10.
 Tenia alguna duda."
 },
 {
@@ -45,7 +45,7 @@ creo que me ha dicho que iba al laboratorio 3."
 },
 {
 "Prueba": 5,
-"Nombre": "Juan",
+"Nombre": "Jose",
 "Coordenada X": 53,
 "Coordenada Y": 55,
 "Personaje de la prueba": "Te estaba buscando, tengo ya tu placa arreglada, pero antes tendras que superar
@@ -103,7 +103,7 @@ podrias ir con el. Baja por las escaleras 1."
 "Nombre": "Mencia",
 "Coordenada X": 67,
 "Coordenada Y": 32,
-"Personaje de la prueba": "Hola! Creo que nos toca ahora clase de Buses I2C y SPI. Empezamos?
+"Personaje de la prueba": "Hola! Creo que acabamos hoy la clase de Buses I2C y SPI. Repasamos?
 ENTER para realizar prueba
 ESC para salir",
 "El resto de personajes": "Me ha dicho Mencia que tenias clase ahora en el laboratorio 6. Que haces aqui?"
@@ -137,7 +137,7 @@ ESC para salir",
 "Personaje de la prueba": "Preparado par el examen final?
 ENTER para realizar prueba
 ESC para salir",
-"El resto de personajes": "Fran y Jose Daniel te estan esperando en el aula O-202 de ICADE para el examen final.
-Baja por las escaleras 2 Estas preparado?"
+"El resto de personajes": "Fran y Edu te estan esperando en el aula O-202 de ICADE para el examen final.
+Baja por las escaleras 2, las de la capilla, Estas preparado?"
 }
 ]
