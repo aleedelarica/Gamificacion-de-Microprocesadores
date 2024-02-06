@@ -34,7 +34,7 @@
     "OPCION C": "InicializarReloj()",
     "OPCION D": "asm(''di'')",
     "OPCION E": "INTCONbits.MVEC=0",
-    "ENTRADA 1": INTCON|=12,
+    "ENTRADA 1": "INTCON|=12",
     "ENTRADA 2": "asm(''ei'')"
   },
   {
@@ -119,17 +119,4 @@ else{delta=ref-refant};"
     "ENTRADA 2": "un .c",
     "ENTRADA 3": "ningun lado, no se puede,"
   },
-
-  {
-    "PREGUNTA": "Si tenemos una variable uint32_t que solo se usa en el interior de una interrupcion  o de una funcion pero queremos que guarde el valor de la ultima vez que entro en ella, 
-	debo definirla como ___(1) y si queremos que se inicialice cada vez ___(2)",
-    "HUECOS": 2,
-    "OPCIONES": 4,
-    "OPCION A": "global uint32_t var=0",
-    "OPCION B": "local uint32_t var=0",
-    "OPCION C": "static uint32_t var=0",
-    "OPCION D": "uint32_t var=0",
-    "ENTRADA 1": "static uint32_t var=0",
-    "ENTRADA 2": "uint32_t var=0"
-  }
 ]

@@ -18,7 +18,8 @@ e) Finalmente, se debe habilitar el temporizador mediante el registro __________
 a) El bit TCKPS se utiliza para definir el ___________ del temporizador.
 b) El bit TCS se utiliza para seleccionar la ___________ del temporizador. Se utilizara el reloj externo o el interno?.
 c) El bit TGATE se utiliza para habilitar el modo ___________.
-d) El bit ON se utiliza para ___________ o ___________ el temporizador.",
+d) El bit ON se utiliza para ___________ o ___________ el temporizador.
+Opciones: encender, apagar, preescalado, fuente, gated",
 "HUECOS": 5,
 "RESPUESTA 1": "preescalado",
 "RESPUESTA 2": "fuente",
@@ -58,7 +59,8 @@ f) Finalmente, se debe habilitar el temporizador mediante el registro __________
 a) Para remapear pines de INPUT, se debe definir de _______ a ________ y para pines de OUTPUT, al contrario.
 b) Para desbloquear la escritura de estos registros hay que escribir en el registro _______ los valores ___________ y __________ de forma consecutiva.
 c) Si se quiere conectar el pin T2CK a RPB15, la linea a escribir seria ____________. 
-d) Si se quiere conectar el pin OC4 al pin RPC1, la linea a escribir seria ____________.",
+d) Si se quiere conectar el pin OC4 al pin RPC1, la linea a escribir seria ____________.
+Opciones: funcionalidad, pin, 0xAA996655, T2CKR=3, RPC1R=5, SYSKEY",
 "HUECOS": 7,
 "RESPUESTA 1": "pin",
 "RESPUESTA 2": "funcionalidad",

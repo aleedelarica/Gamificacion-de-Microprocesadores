@@ -198,7 +198,7 @@ public class GameScreen extends ScreenAdapter{
         Label authorsLabel=new Label("MainAuthor: Alejandra De La Rica\n" +
         "Mantainer and New Features: Francisco Martin\n" +
         "Bugs Report: fmartin@comillas.edu\n" +
-        "v1.1 2024",skinSettings);
+        "v1.2 2024",skinSettings);
         Label volLabel=new Label("Volumen: ",skinSettings);
         final Slider volSlider= new Slider(0,100,5,false,skinSettings);
         volSlider.setSize(200,50);

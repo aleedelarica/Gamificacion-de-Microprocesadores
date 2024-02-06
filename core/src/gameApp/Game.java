@@ -78,7 +78,7 @@ public class Game extends com.badlogic.gdx.Game {
 			nextTestNumber = 1;
 			lives = 3;
 		}
-		
+		//nextTestNumber=6;
 		//Initialize first screens
 		titleScreen = new TitleScreen(this,saved);
 		selectScreen = new SelectScreen(this);
