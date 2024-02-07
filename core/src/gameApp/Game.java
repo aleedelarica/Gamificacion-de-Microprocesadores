@@ -134,7 +134,7 @@ public class Game extends com.badlogic.gdx.Game {
 			for (int i = 1; i<= tests.size(); i++) {
 				ArrayList<String> test = tests.get(i);
 				if (test.get(2).equals(clave)){
-					nextTestNumber = i;
+					nextTestNumber = i + 1;
 					break;
 				}
 			}
