@@ -78,13 +78,13 @@ public class Game extends com.badlogic.gdx.Game {
 			nextTestNumber = 1;
 			lives = 3;
 		}
-		//nextTestNumber=6;
+		//nextTestNumber=13;
 		//Initialize first screens
 		titleScreen = new TitleScreen(this,saved);
 		selectScreen = new SelectScreen(this);
 
 		//Read and load tests (In ReadTests class)
-		tests = ReadTests.loadTests();
+		//tests = ReadTests.loadTests();
 
 		//Load background music
 		menuMusic = Gdx.audio.newMusic(Gdx.files.internal("Music/song.ogg"));
@@ -120,6 +120,7 @@ public class Game extends com.badlogic.gdx.Game {
   * If the player's data has not been saved before, it will be saved with default values.
   */
 	public void startGame(){
+		tests = ReadTests.loadTests();
 		if (!saved) {
 			//If there is no saved data, save the initial variables
 			savedData.put(keys.get(2), selectScreen.getName());
@@ -127,6 +128,16 @@ public class Game extends com.badlogic.gdx.Game {
 			savedData.put(keys.get(4), "13");
 			savedData.put(keys.get(5), "70");
 			savedData.put(keys.get(6), "frente");
+
+			String clave= selectScreen.getClave();
+			
+			for (int i = 1; i<= tests.size(); i++) {
+				ArrayList<String> test = tests.get(i);
+				if (test.get(2).equals(clave)){
+					nextTestNumber = i;
+					break;
+				}
+			}
 		}
 
 		//Initialize the game screen
@@ -205,7 +216,8 @@ public class Game extends com.badlogic.gdx.Game {
 
 		if(lives > 0){
 			//If there are lives left, set main screen to end test screen
-			endTestScreen = new EndTestScreen(this, passed, results);
+			if(nextTestNumber!=14)
+				endTestScreen = new EndTestScreen(this, passed, results, tests.get(nextTestNumber).get(2));
 			winScreen= new WinScreen(this);
 			if (nextTestNumber==14){
 				setScreen(winScreen);

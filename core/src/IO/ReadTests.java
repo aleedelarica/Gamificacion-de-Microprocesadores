@@ -32,13 +32,14 @@ public class ReadTests {
             int testNumber = value.getInt("TestNum");
             String type = value.getString("TestType");
             String name = value.getString("FileName");
-
+            String key = value.getString("Key");
 
             ArrayList<String> data = new ArrayList<>();
 
             data.add(type);
             data.add(name);
-
+            data.add(key);
+            
             tests.put(testNumber, data);
 
         }

@@ -1,5 +1,8 @@
 package gameScreens;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.GL20;
@@ -10,6 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import gameApp.Game;
+import questionTypes.FillInTheGapQuestion;
 
 public class SelectScreen extends ScreenAdapter {
     
@@ -34,6 +38,7 @@ public class SelectScreen extends ScreenAdapter {
     private String gender;
 
     private TextButton startButton;
+    private TextField clave;
 
     /**
      * The SelectScreen class represents the screen where the player can select their character and enter their name.
@@ -62,6 +67,9 @@ public class SelectScreen extends ScreenAdapter {
         //Create label and textfield for name input
         Label nameLabel=new Label("Nombre de tu personaje: ",skin,"title");
         name= new TextField("",skin);
+        Label claveLabel=new Label("Clave nivel: ",skin,"title");
+        clave = new TextField("",skin);
+
 
         //Create label and buttons for gender selection
         Label spriteLabel=new Label("Elige personaje: ",skin,"title");
@@ -69,14 +77,17 @@ public class SelectScreen extends ScreenAdapter {
         Image boyImage = new Image(boyTexture);
         Texture girlTexture = new Texture(Gdx.files.internal("People/Retratos/Lady2.png"));
         Image girlImage = new Image(girlTexture);
+
         boyButton=new Button(boyImage,skin);
         girlButton= new Button(girlImage,skin);
         startButton =new TextButton("Iniciar Juego",skin);
         boyButton.setChecked(true);
 
         //Add components to table
-        table.add(nameLabel).padBottom(50);
-        table.add(name).padBottom(50).row();
+        table.add(nameLabel).padBottom(25);
+        table.add(name).padBottom(25).row();
+        table.add(claveLabel).padBottom(25);
+        table.add(clave).padBottom(25).row();
         table.add(spriteLabel).colspan(2).left().padBottom(25).row();
 
         //Add table to stage
@@ -163,5 +174,9 @@ public class SelectScreen extends ScreenAdapter {
 
     public String getName(){
         return name.getText();
+    }
+
+    public String getClave(){
+        return clave.getText();
     }
 }

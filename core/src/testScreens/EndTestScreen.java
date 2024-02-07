@@ -36,7 +36,7 @@ public class EndTestScreen extends ScreenAdapter{
 
     private TextButton endButton;
 
-    public EndTestScreen(Game game, boolean passed, ArrayList<Integer> results) {
+    public EndTestScreen(Game game, boolean passed, ArrayList<Integer> results, String key) {
 
         this.game = game;
         this.results=results;
@@ -60,7 +60,7 @@ public class EndTestScreen extends ScreenAdapter{
         Label label = new Label("", skinDialog, "black");
         label.setPosition(300,Gdx.graphics.getHeight()/2+50);
         if(passed){
-            label.setText("Enhorabuena, has superado la prueba!! \nBusca la siguiente prueba por el mapa.");
+            label.setText("Enhorabuena, has superado la prueba!! \nBusca la siguiente prueba por el mapa. Clave: " + key);
             stage.addActor(label);
         }else{
             table.row();
